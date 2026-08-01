@@ -19,7 +19,7 @@ def merge(arr, l, m, r):
         R[j] = arr[m + 1 + j]
 
     i = j = 0
-    k = 0
+    k = l
 
     while i < s1 and j < s2:
         if L[i] > R[j]:
@@ -33,7 +33,7 @@ def merge(arr, l, m, r):
 
     while i < s1:
         arr[k] = L[i]
-        L += 1
+        i += 1
         k += 1
 
     while j < s2:
